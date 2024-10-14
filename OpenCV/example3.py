@@ -17,6 +17,7 @@ def camera_detector(path) -> None:
         success, frame = cam.read()
         if (success == False):
             cam.release()
+            # cam = cv2.VideoCapture('http://192.168.0.103:4747/video?640x480')
             cam = cv2.VideoCapture(path)
 
             continue
