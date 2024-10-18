@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def generate_marker(marker_id, marker_size, directory, filename):
     aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_6X6_250)
 
@@ -12,6 +13,7 @@ def generate_marker(marker_id, marker_size, directory, filename):
     plt.axis('off')  # Hide axes
     plt.title(f'ArUco Marker {marker_id}')
     plt.show()
+
 
 def detect_marker():
     cap = cv2.VideoCapture(0)
@@ -34,4 +36,4 @@ def detect_marker():
 
 if __name__ == '__main__':
     for i in range(30, 40):
-	    generate_marker(i, 500, './aruco', f'marker{i}_size500x500.png')
+        generate_marker(i, 500, './aruco', f'marker{i}_size500x500.png')
