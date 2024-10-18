@@ -33,4 +33,5 @@ def detect_marker():
 
 
 if __name__ == '__main__':
-	detect_marker()
+    for i in range(30, 40):
+	    generate_marker(i, 500, './aruco', f'marker{i}_size500x500.png')
